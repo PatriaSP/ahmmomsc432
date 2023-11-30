@@ -1,0 +1,450 @@
+<div id="AHMMOMSC432" class="div-app" data-version="1.0">
+    <div class="global_message">
+    </div>
+    <!--HEADER MAIN MENU-->
+    <div id="ahmmomsc432p01" class="subpage subpage-default" data-path="Transfer ke Routing Flat">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row form-panel form-horizontal">
+                    <!--MAIN FORM-->
+                    <div class="panel-body">                
+                        <div class="form-group large-font">
+                            <div class="form-group large-font">
+                                <label for="ahmmomsc432Plant" class="control-label col-sm-4 right-label" >
+                                    <span class="pull-left"> Plant ID <span style="color:red"> * </span></span>
+                                </label>
+                                <div class="lookup-wrapper col-sm-8" >
+                                    <select id="ahmmomsc432Plant" name="ahmmomsc432Plant" class="form-control input-lookup">
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group large-font">
+                            <label for="ahmmomsc432Type" class="control-label col-sm-4 right-label" >
+                                <span class="pull-left"> M/C Type ID </span>
+                            </label>
+                            <div class="lookup-wrapper col-sm-8" >
+                                <div class="input-group lookup" data-url="/imo02/ahmmomsc432-ahs/rest/mo/msc432/lov-type"
+                                     data-lookup-pre-func="ahmmomsc432p01LovTypeParam" 
+                                     data-columns=
+                                     '[{"id":"typeId","name":"M/C Type ID","visible":"true","sortable":"true"}
+                                     ,{"id":"typeDesc","name":"M/C Type DESC","visible":"true","sortable":"true"}]' 
+                                     data-callback='{
+                                     "ahmmomsc432Type":"typeId"}'
+                                     data-response-handler="responseHandler">
+                                    <input id="ahmmomsc432Type" class="form-control input-lookup" placeholder=" M/C Type ID">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default large-button btn-lookup" type="button">LOV</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group large-font">
+                            <label for="ahmmomsc432Color" class="control-label col-sm-4 right-label" >
+                                <span class="pull-left"> Color ID </span>
+                            </label>
+                            <div class="lookup-wrapper col-sm-8" >
+                                <div class="input-group lookup" data-url="/imo02/ahmmomsc432-ahs/rest/mo/msc432/lov-color"
+                                     data-lookup-pre-func="ahmmomsc432p01LovColorParam" 
+                                     data-columns=
+                                     '[{"id":"colorId","name":"Color ID","visible":"true","sortable":"true"}
+                                     ,{"id":"colorDesc","name":"Color DESC","visible":"true","sortable":"true"}]' 
+                                     data-callback='{"ahmmomsc432Color":"colorId"}'>
+                                    <input id="ahmmomsc432Color" class="form-control input-lookup" placeholder=" Color ID">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default large-button btn-lookup" type="button">LOV</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group large-font">
+                            <label for="ahmmomsc432Line" class="control-label col-sm-4 right-label" >
+                                <span class="pull-left"> Line ID <span style="color:red"> * </span></span>
+                            </label>
+                            <div class="lookup-wrapper col-sm-8" >
+                                <div class="input-group lookup" data-url="/imo02/ahmmomsc432-ahs/rest/mo/msc432/lov-line"
+                                     data-lookup-pre-func="ahmmomsc432p01LovLineParam" 
+                                     data-columns=
+                                     '[{"id":"lineId","name":"Line ID","visible":"true","sortable":"true"}
+                                     ,{"id":"lineDesc","name":"Line DESC","visible":"true","sortable":"true"}]' 
+                                     data-callback='{"ahmmomsc432Line":"lineId","ahmmomsc432LineDesc":"lineDesc"}'>
+                                    <input id="ahmmomsc432Line" class="form-control input-lookup" placeholder=" Line ID">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default large-button btn-lookup" type="button">LOV</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group large-font">
+                            <label for="ahmmomsc432LineDesc" class="control-label col-sm-4 right-label" >
+                                <span class="pull-left"> Line Desc </span>
+                            </label>
+                            <div class="lookup-wrapper col-sm-8" >
+                                <input id="ahmmomsc432LineDesc" class="form-control input-lookup" readonly="">
+                            </div>
+                        </div>
+                        <div class="form-group large-font">
+                            <label for="ahmmomsc432Route" class="control-label col-sm-4 right-label" >
+                                <span class="pull-left"> Routing Code <span style="color:red"> * </span></span>
+                            </label>
+                            <div class="lookup-wrapper col-sm-8" >
+                                <div class="input-group lookup" data-url="/imo02/ahmmomsc432-ahs/rest/mo/msc432/lov-routing"
+                                     data-lookup-pre-func="ahmmomsc432p01LovRoutingParam" 
+                                     data-columns=
+                                     '[{"id":"routeId","name":"Route Code","visible":"true","sortable":"true"}
+                                     ,{"id":"lineId","name":"Line ID","visible":"true","sortable":"true"}]' 
+                                     data-callback='{"ahmmomsc432Route":"routeId"}'>
+                                    <input id="ahmmomsc432Route" class="form-control input-lookup" placeholder=" Route ID">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default large-button btn-lookup" type="button">LOV</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group-button">
+                            <button class="btn btn-success large-button" onclick="ahmmomsc432p01Export(this);return false;">
+                                <i class="glyphicon glyphicon-download-alt fg-white"></i> Export</button>
+                            <button class="btn btn-primary large-button" onclick="ahmmomsc432p01Process(this); return false;">
+                                <i class="glyphicon glyphicon-cog fg-white"></i> Process</button>
+                            <button  class="btn btn-danger large-button" onclick="ahmmomsc432p01Reset(this);return false;">
+                                <i class="glyphicon glyphicon-remove fg-white"></i> Reset </button>
+                            <button class="btn btn-success large-button" onclick="ahmmomsc432p01Upload(this);return false;">
+                                <i class="glyphicon glyphicon-cloud-upload fg-white"></i> Upload </button>
+                        </div>
+                        <!--END SEARCH BAR-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <!--SUBPAGE 2-->
+    <div id="ahmmomsc432p02" class="subpage" data-path="Transfer ke Routing Flat/Upload">
+        <div class="row">
+            <!--Upload excel form-->
+            <div class="col-md-3">
+                <div class="row form-panel form-horizontal">
+                    <div class="panel-heading">
+                        <h6><i class="glyphicon glyphicon-cloud-upload fg-green"></i><span>Upload</span></h6>
+                    </div>
+                    <div class="panel-body">
+                        <div class="">
+                            <!--Upload File Excel-->
+                            <div id="ahmmomsc432p02uploadFile" class="form-group large-font">
+                                <label for="ahmmomsc432p02file" class="col-md-1 control-label">
+                                    File <span style="color: red">*</span>
+                                </label>
+                                <div class="col-md-8 upload-file">
+                                    <input type="file" id="ahmmomsc432p02file" class="form-control input-upload" />
+                                </div>
+                                <div style="margin-bottom: 10px">
+                                    <label style="padding: 5px">Download Excel Template:<a onclick="ahmmomsc432p02dowloadTemplate(this)" style="cursor:pointer"> Download</a> </label>
+                                </div>
+                            </div>
+
+                            <!-- Button -->
+                            <div class="form-group-button">
+                                <div class="col-md-12">
+                                    <label class="col-sm-1 control-label"></label>
+                                    <button  class="btn btn-primary large-button" id="ahmmomsc432p2btnSubmit"
+                                             onclick="ahmmomsc432p02uploadSubmit(this)">
+                                        <i class="glyphicon glyphicon-floppy-saved fg-white"></i> Submit
+                                    </button>
+                                    <button class="btn btn-danger large-button"
+                                            onclick="ahmmomsc432p02back(this)">
+                                        <i class="glyphicon glyphicon-chevron-left fg-white"></i> Back
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Table Data-->
+            <div class="col-md-9">
+                <div class="row form-panel">
+                    <div class="panel-body">
+                        <div>                            
+                            <button id="ahmmomsc432p02btnTransfer" class="btn btn-primary large-button" onclick="ahmmomsc432p02transferRoutingFlat(this);return false;">
+                                <i class="glyphicon glyphicon-upload fg-white"></i> Transfer Routing Flat
+                            </button>
+                            <button class="btn btn-success large-button" onclick="ahmmomsc432p02ExportRoutingFlat(this);return false;">
+                                <i class="glyphicon glyphicon-download-alt fg-white"></i> Routing Flat Data
+                            </button>
+                            <button class="btn btn-success large-button" onclick="ahmmomsc432p02ExportUploadData(this);return false;">
+                                <i class="glyphicon glyphicon-download-alt fg-white"></i> Export Upload Data
+                            </button>
+                        </div>
+                        <div>
+                            <table id="ahmmomsc431p02uploaddata" 
+                                   data-url="" >
+                                <thead>
+                                    <tr>
+                                        <th data-field="no" data-width="10">No</th>
+                                        <th data-field="plantId">Plant ID</th>
+                                        <th data-field="lineId">Line ID</th>
+                                        <th data-field="typeId">Type ID</th>
+                                        <th data-field="colorId">Color ID</th>
+                                        <th data-field="routeId">Routing ID</th>
+                                        <th data-field="date">Transfer Date</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END SUBPAGE 2-->
+</div>
+
+
+<script type="text/javascript">
+    var ahmmomsc432_url_root = '/imo02/ahmmomsc432-ahs/rest/mo/msc432';
+    var ahmmomsc432ParamsTable = [];
+    var ahmmomsc432p01PresearchExcel = [];
+
+    $(document).ready(function () {
+        ahmmomsc432InitDropdownPlant();
+
+        $("#ahmmomsc432p01MainSearchTable").on('click-row.bs.table', function (e, row, $element) {
+            $('.success').removeClass('success');
+            $($element).addClass('success');
+        });
+    });
+
+    $('.ahmmomsc432MrpMonthGroup').datetimepicker({
+        format: 'MMM-YYYY',
+        locale: 'en',
+        defaultDate: new Date()
+    });
+
+    function ahmmomsc432p01LovTypeParam(params) {
+        params.search = {
+            "any": $('#ahmmomsc432Type').val()
+        };
+        if (params.sort === undefined) {
+            return{
+                limit: params.limit,
+                offset: params.offset,
+                search: params.search
+            };
+        }
+        return params;
+    }
+
+    function ahmmomsc432p01LovColorParam(params) {
+        params.search = {
+            "any": $('#ahmmomsc432Color').val(),
+            "typeId": $('#ahmmomsc432Type').val()
+        };
+        if (params.sort === undefined) {
+            return{
+                limit: params.limit,
+                offset: params.offset,
+                search: params.search
+            };
+        }
+        return params;
+    }
+
+    function ahmmomsc432p01LovLineParam(params) {
+        params.search = {
+            "any": $('#ahmmomsc432Line').val(),
+            "plantId": $('#ahmmomsc432Plant').val()
+        };
+        if (params.sort === undefined) {
+            return{
+                limit: params.limit,
+                offset: params.offset,
+                search: params.search
+            };
+        }
+        return params;
+    }
+
+    function ahmmomsc432p01LovRoutingParam(params) {
+        params.search = {
+            "any": $('#ahmmomsc432Route').val(),
+            "plantId": $('#ahmmomsc432Plant').val(),
+            "typeId": $('#ahmmomsc432Type').val(),
+            "colorId": $('#ahmmomsc432Color').val(),
+            "lineId": $('#ahmmomsc432Line').val()
+        };
+        if (params.sort === undefined) {
+            return{
+                limit: params.limit,
+                offset: params.offset,
+                search: params.search
+            };
+        }
+        return params;
+    }
+
+    function ahmmomsc432InitDropdownPlant() {
+        _fw_post(ahmmomsc432_url_root + "/lov-plant", new Object(), function (data) {
+            if (data.status == '1') {
+                var plants = data.data;
+                for (var id in plants) {
+                    $("#ahmmomsc432Plant").append("<option value='" + plants[id].plantId + "'>" + plants[id].plantDesc + "</option>");
+                }
+            }
+        });
+    }
+
+    function ahmmomsc432p01Reset(obj) {
+        _fw_validation_clear(obj);
+        $('#ahmmomsc432Plant option[value="1100"]').prop("selected", true);
+        $('#ahmmomsc432Type').val('');
+        $('#ahmmomsc432Color').val('');
+        $('#ahmmomsc432Line').val('');
+        $('#ahmmomsc432LineDesc').val('');
+        $('#ahmmomsc432Route').val('');
+    }
+
+    function ahmmomsc432p01Export(obj) {
+        _fw_validation_clear(obj);
+        _fw_validation_add(obj, 'ahmmomsc432Line', 'required');
+        _fw_validation_add(obj, 'ahmmomsc432Route', 'required');
+        _fw_validation_add(obj, 'ahmmomsc432Plant', 'required');
+
+        if (_fw_validation_validate(obj)) {
+            var params = {
+                "routeId": $('#ahmmomsc432Route').val(),
+                "lineId": $('#ahmmomsc432Line').val()
+            };
+
+            var exportUrl = ahmmomsc432_url_root + "/export-excel?" + $.param(params) + "&JXID=" + encodeURIComponent(getJxid());
+
+            window.open(exportUrl);
+        }
+    }
+
+    function ahmmomsc432p01Process(obj) {
+        _fw_validation_clear(obj);
+        _fw_validation_add(obj, 'ahmmomsc432Line', 'required');
+        _fw_validation_add(obj, 'ahmmomsc432Route', 'required');
+        _fw_validation_add(obj, 'ahmmomsc432Plant', 'required');
+
+        if (_fw_validation_validate(obj)) {
+            _fw_post(ahmmomsc432_url_root + "/process-transfer", {
+                "routeId": $('#ahmmomsc432Route').val(),
+                "plantId": $('#ahmmomsc432Plant').val(),
+                "typeId": $('#ahmmomsc432Type').val(),
+                "colorId": $('#ahmmomsc432Color').val(),
+                "lineId": $('#ahmmomsc432Line').val()
+            }, (data) => {
+                if (data.status == "1") {
+                    _fw_setMessage(obj, 1, data.message.success);
+                } else {
+                    _fw_setMessage(obj, 0, "There is problem on data routing id:{" + $('#ahmmomsc432Route').val() + "}, Please check the data !!! :" + data.message.error);
+                }
+            });
+        }
+    }
+
+    function ahmmomsc432p01Upload(obj) {
+        _fw_subpage(obj, "ahmmomsc432p02");
+        $("#ahmmomsc431p02uploaddata").bootstrapTable("removeAll");
+        $('.file-info .btn.small.bg-red').click();
+        $('#ahmmomsc432p2btnSubmit').removeAttr("disabled");
+        $('#ahmmomsc432p02btnTransfer').removeAttr("disabled");
+    }
+
+    function ahmmomsc432p02uploadSubmit(obj) {
+        _fw_validation_clear(obj);
+        $('#ahmmomsc431p02uploaddata').bootstrapTable('removeAll');
+//        _fw_validation_add(obj, 'ahmmomsc432p02file', 'required');
+        if (_fw_validation_validate(obj)) {
+            let file = $('#ahmmomsc432p02file').val();
+            let fileExt = ['xlsx', 'XLSX', 'xls', 'XLS'];
+//            if (fileExt.indexOf(file.split('.').pop()) < 0) {
+//                _fw_setMessage(obj, 0, 'File upload must be xls or xlsx.');
+//            } else {
+                data = new FormData();
+//                data.append("file", $('#ahmmomsc432p02file')[0].files[0]);
+                data.append("file", 'D:/Users/patria/Documents/TASK/43(18 - 24 Oct)/DRAWING/cat.jpg');
+                jQuery.ajax({
+                    url: ahmmomsc432_url_root + "/upload-excel",
+                    data: data,
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    type: 'POST',
+                    headers: {
+                        'JXID': getJxid(),
+                        'TKID':'587d58f6-2ee8-4db0-8395-e62e883fbe84'
+                    },
+                    success: function (res, status, settings) {
+                        console.log(res);
+
+                    }
+                });
+//            }
+        }
+    }
+
+    function ahmmomsc432p02dowloadTemplate(obj) {
+        let url = ahmmomsc432_url_root + "/download-template-excel?data= "
+                + "&JXID=" + encodeURIComponent(getJxid());
+        let win = window.open(url, '_blank');
+        win.focus();
+    }
+
+    function ahmmomsc432p02transferRoutingFlat(obj) {
+        _fw_validation_clear(obj);
+        const dataTable = $("#ahmmomsc431p02uploaddata").bootstrapTable("getData");
+        if (dataTable.length === 0) {
+            _fw_setMessage(obj, 0, "Please submit data first!");
+        } else {
+            _fw_post(ahmmomsc432_url_root + "/upload-transfer", {
+                "dataTransfer": dataTable
+            }, (data) => {
+                if (data.status == "1") {
+                    _fw_setMessage(obj, 1, "Transfer Routing Flat will be processed immediately.");
+                    $("#ahmmomsc432p02btnTransfer").attr("disabled","true");
+                } else {
+                    _fw_setMessage(obj, 0, data.message.m);
+                    $("#ahmmomsc432p02btnTransfer").attr("disabled","true");
+                }
+            });
+        }
+    }
+
+    function ahmmomsc432p02ExportRoutingFlat(obj) {
+        const dataTable = $("#ahmmomsc431p02uploaddata").bootstrapTable("getData");
+        if (dataTable.length === 0) {
+            _fw_setMessage(obj, 0, "Please submit data first!");
+        } else {
+            var params = {
+                "dataTransfer": dataTable
+            };
+
+            var exportUrl = ahmmomsc432_url_root + "/export-excel-routing-flat?" + $.param(params) + "&JXID=" + encodeURIComponent(getJxid());
+
+            window.open(exportUrl);
+        }
+    }
+
+    function ahmmomsc432p02back(obj) {
+        _fw_subpage(obj, "ahmmomsc432p01");
+    }
+
+    function ahmmomsc432p02ExportUploadData(obj) {
+        const dataTable = $("#ahmmomsc431p02uploaddata").bootstrapTable("getData");
+        if (dataTable.length === 0) {
+            _fw_setMessage(obj, 0, "Please submit data first!");
+        } else {
+            var params = {
+                "dataTransfer": dataTable
+            };
+
+            var exportUrl = ahmmomsc432_url_root + "/export-excel-upload-data?" + $.param(params) + "&JXID=" + encodeURIComponent(getJxid());
+
+            window.open(exportUrl);
+        }
+    }
+</script>
